@@ -11,8 +11,8 @@
       .attr("height", height);
 
     // Load data and the GeoJSON file
-    const data = await d3.csv('src/data/filtered_scrubbed.csv');
-    const geoData = await d3.json('src/data/states.json');
+    const data = await d3.csv('./data/filtered_scrubbed.csv');
+    const geoData = await d3.json('./data/states.json');
 
     // Process data
     const dataMap = new Map(data.map(d => [d.state, +d.count]));
@@ -32,7 +32,6 @@
       .attr("fill", d => {
         const stateName = d.properties.NAME;
         const value = dataMap.get(stateName);
-        
         return value ? colorScale(value) : '#ccc';
       })
       .attr("stroke", "#333")
@@ -40,17 +39,28 @@
       .text(d => {
         const stateName = d.properties.name;
         const value = dataMap.get(stateName);
-        console.log(`${stateName}: ${value}`)
         return `${stateName}: ${value}`;
       });
   });
 </script>
 
-<svg id="choropleth"></svg>
+<div class="container">
+  <h1 id="title">Amount Of UFO Sightings by State</h1>
+  <svg id="choropleth"></svg>
+</div>
 
 <style>
-  svg {
+
+
+  #title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #choropleth {
     width: 100%;
+    max-width: 800px; /* Optional: restrict maximum width */
     height: auto;
+    display: block;
   }
 </style>
