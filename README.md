@@ -1,5 +1,8 @@
 # A Svelte Template for Interactive Articles with Svelte
 
+place data in public/data folder
+
+
 For UCSD dataviz course: [https://dsc106.com/](https://dsc106.com/).
 
 This is a starter template to build an interactive article using Svelte.
