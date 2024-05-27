@@ -14,12 +14,31 @@
 <Meta />
 <Title />
 <Intro />
-<ScrollSide />
+
 
 <div class="center">
   <Choropleth/>
 </div>
-<ScrollCenter />
+<!--
+after choropleth(s) should be a way to show user
+the amount of sightings there are at a certain time (7am,7pm,12pm)
+by itself using aggregate of all states, and an option to choose a specific state
+for the given time (all states, CA, NV,..)
+
+idea:
+a center number and two drop down menus above it for each option
+center number changes based on each drop down menu choice
+
+
+-->
+<ScrollSide />
+<!--
+use the scroll side template to show the most common shapes people have seen:
+u can do ranking of each type or use the comments section in the dataset and find 
+funny quotes people have said
+idk but goal is to let people know what shapes to look for in the sky
+
+-->
 <Conclusion />
 <Resources />
 
