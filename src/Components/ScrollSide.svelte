@@ -1,7 +1,6 @@
 <script>
   import Scrolly from "./Scrolly.svelte";
-  import katexify from "../katexify";
-  import { select, selectAll } from "d3-selection";
+  import { select } from "d3-selection";
 
   // scroll iterator
   let value;
@@ -18,26 +17,100 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sint aut corrupti ullam neque quia labore laborum perspiciatis, molestias amet at, voluptatem ratione quaerat in sit minima reprehenderit molestiae, nobis sed. Earum facere exercitationem sit rerum, expedita magni nihil alias?
         </p>
     <br><br>
+    
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sint aut corrupti ullam neque quia labore laborum perspiciatis, molestias amet at, voluptatem ratione quaerat in sit minima reprehenderit molestiae, nobis sed. Earum facere exercitationem sit rerum, expedita magni nihil alias?
   `,
   ];
 
-  const target2event = {
-    0: () => {
-      // console.log('0' )
-    },
-    1: () => {
-      select("#chart1").style("background-color", "red");
-      select("#chart2").style("background-color", "green");
-    },
-
-    2: () => {
-      select("#chart1").style("background-color", "purple");
-      select("#chart2").style("background-color", "coral");
-    },
+  const resetCharts = () => {
+    select("#chart1").selectAll("*").remove();
+    select("#chart2").selectAll("*").remove();
   };
 
-  $: if (typeof value !== "undefined") target2event[value]();
+  const target2event = {
+    0: () => {
+      select("#chart1").style("background-color", "red");
+      select("#chart1").selectAll("*").remove();
+      select("#chart1")
+        .append("text")
+        .attr("x", "50%")
+        .attr("y", "50%")
+        .attr("dominant-baseline", "middle")
+        .attr("text-anchor", "middle")
+        .text("Light: 16565")
+        .style("fill", "white")
+        .style("font-size", "24px");
+
+      select("#chart2").style("background-color", "green");
+      select("#chart2").selectAll("*").remove();
+      select("#chart2")
+        .append("text")
+        .attr("x", "50%")
+        .attr("y", "50%")
+        .attr("dominant-baseline", "middle")
+        .attr("text-anchor", "middle")
+        .text("Triangle: 7865")
+        .style("fill", "white")
+        .style("font-size", "24px");
+    },
+    1: () => {
+      select("#chart1").style("background-color", "purple");
+      select("#chart1").selectAll("*").remove();
+      select("#chart1")
+        .append("text")
+        .attr("x", "50%")
+        .attr("y", "50%")
+        .attr("dominant-baseline", "middle")
+        .attr("text-anchor", "middle")
+        .text("Circle: 7608")
+        .style("fill", "white")
+        .style("font-size", "24px");
+
+      select("#chart2").style("background-color", "coral");
+      select("#chart2").selectAll("*").remove();
+      select("#chart2")
+        .append("text")
+        .attr("x", "50%")
+        .attr("y", "50%")
+        .attr("dominant-baseline", "middle")
+        .attr("text-anchor", "middle")
+        .text("Fireball: 6208")
+        .style("fill", "white")
+        .style("font-size", "24px");
+    },
+    2: () => {
+      select("#chart1").style("background-color", "purple");
+      select("#chart1").selectAll("*").remove();
+      select("#chart1")
+        .append("text")
+        .attr("x", "50%")
+        .attr("y", "50%")
+        .attr("dominant-baseline", "middle")
+        .attr("text-anchor", "middle")
+        .text("Circle: 7608")
+        .style("fill", "white")
+        .style("font-size", "24px");
+
+      select("#chart2").style("background-color", "coral");
+      select("#chart2").selectAll("*").remove();
+      select("#chart2")
+        .append("text")
+        .attr("x", "50%")
+        .attr("y", "50%")
+        .attr("dominant-baseline", "middle")
+        .attr("text-anchor", "middle")
+        .text("Fireball: 6208")
+        .style("fill", "white")
+        .style("font-size", "24px");
+    },
+    default: resetCharts
+  };
+
+  $: if (typeof value !== "undefined" && target2event[value]) {
+    target2event[value]();
+  } else {
+    target2event.default();
+  }
 </script>
 
 <h2 class="body-header">Side Scrolly Example</h2>
