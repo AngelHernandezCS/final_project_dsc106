@@ -3,15 +3,21 @@
 
 <section>
   <p class="body-text">
-    Lorem ipsum dolor sit amet <a href="">random link</a> adipisicing elit. Esse
-    dolor nobis
-    <span class="bold">bold text</span> eius voluptate distinctio odit ut quod illo!
-    Nulla consequatur fugiat quia commodi aspernatur necessitatibus est doloremque
-    quam vitae dolorem. Vitae natus ipsum animi officiis et quis obcaecati in molestiae
-    aperiam, perferendis odio a ipsam nam suscipit laboriosam corporis excepturi
-    quisquam? Ratione delectus repellat error maxime quo beatae ullam, quod
+    The universe is vast and full of mysteries. The human race simply cant be the 
+    only intellegent beings out there. Is there any solid evidence to say that we
+    aren't? No... not yet atleast! Just because we cant find them doesn't mean they
+    cant find us. Many people have spotted strange objects in the sky. Is it a sattelite,
+    a shuttle, Elon Musk's Tesla Roadster? Whatever they may be people have one thing
+    cross their mind first, <b>ALIENS</b>. 
   </p>
-  <p class="body-text">This is a trr</p>
+  <br>
+  <p class="body-text">
+    If scientists can't come to any conclusion about what these people have seen
+    then maybe it's best to check it out for youself. In this guide we'll explore
+    prime locations for sightings, the right times to look at, and what exactly
+    you should be looking for in the starry night sky. It might seem like alot
+    but dont worry we'll start off with the first step, Location.
+  </p>
 </section>
 
 <style>

@@ -9,6 +9,7 @@
   import Resources from "./Components/Resources.svelte";
   import ScrollSide from "./Components/ScrollSide.svelte";
   import Choropleth from "./Components/Choropleth.svelte";
+  import Points from "./Components/Points.svelte";
 </script>
 
 <Meta />
@@ -19,6 +20,8 @@
 <div class="center">
   <Choropleth/>
 </div>
+
+<Points/>
 <!--
 after choropleth(s) should be a way to show user
 the amount of sightings there are at a certain time (7am,7pm,12pm)
@@ -31,6 +34,7 @@ center number changes based on each drop down menu choice
 
 
 -->
+
 <ScrollSide />
 <!--
 use the scroll side template to show the most common shapes people have seen:

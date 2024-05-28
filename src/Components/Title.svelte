@@ -1,8 +1,8 @@
 <section id="intro">
-  <h1 id="intro-hed">Title Of The Article</h1>
-  <h1 class="intro-sub">Subtitle of the article.</h1>
+  <h1 id="intro-hed">Beginners Guide To UFO Spotting</h1>
+  <h1 class="intro-sub">They're out there!</h1>
   <h3 id="intro__date">
-    <a href="https://twitter.com/" target="_blank">Author Name</a>, Month Year
+    <a href="https://twitter.com/" target="_blank">Angel H, Nida F, Marcus R</a>, June 2024
   </h3>
 </section>
 
