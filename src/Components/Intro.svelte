@@ -21,4 +21,7 @@
 </section>
 
 <style>
+  .body-text{
+    color: white;
+  }
 </style>

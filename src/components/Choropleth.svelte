@@ -16,9 +16,12 @@
 
     // Process data
     const dataMap = new Map(data.map(d => [d.state, +d.count]));
+    
     // Create a color scale
-    const colorScale = d3.scaleSequential(d3.interpolatePurples)
-      .domain(d3.extent(data, d => +d.count));
+    const colorScale = d3.scaleSequential()
+  .domain([d3.min(data, d => +d.count), d3.max(data, d => +d.count)])
+  .interpolator(d3.interpolatePurples) // Using d3.interpolatePurples
+  .range([d3.interpolatePurples(0.3), d3.interpolatePurples(0.9)]); 
 
     // Create a projection and path generator
     const projection = d3.geoAlbersUsa().fitSize([width, height], geoData);
@@ -33,6 +36,7 @@
       .style("border-radius", "3px")
       .style("pointer-events", "none")
       .style("display", "none");
+
     // Draw the map
     svg.selectAll("path")
       .data(geoData.features)
@@ -41,9 +45,10 @@
       .attr("fill", d => {
         const stateName = d.properties.NAME;
         const value = dataMap.get(stateName);
-        return value ? colorScale(value) : '#ccc';
+        return value ? colorScale(value) : d3.interpolatePurples(0.3); // Ensure states with no data are set to a distinct color
       })
-      .attr("stroke", "#333")
+      .attr("stroke", "#fff")
+      .attr("stroke-width", 0.5)
       .on("mouseover", function(event, d) {
         const stateName = d.properties.NAME;
         const value = dataMap.get(stateName);
@@ -56,12 +61,8 @@
       })
       .on("mouseout", function() {
         tooltip.style("display", "none");
-      })
-      .text(d => {
-        const stateName = d.properties.name;
-        const value = dataMap.get(stateName);
-        return `${stateName}: ${value}`;
       });
+
   });
 </script>
 
@@ -72,11 +73,10 @@
 </div>
 
 <style>
-
-
   #title {
     text-align: center;
     margin-bottom: 20px;
+    color: white; /* Set title color to white for better contrast */
   }
 
   #choropleth {
@@ -84,5 +84,17 @@
     max-width: 800px; /* Optional: restrict maximum width */
     height: auto;
     display: block;
+  }
+
+
+  .tooltip {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 3px;
+    pointer-events: none;
+    position: absolute;
+    display: none;
   }
 </style>

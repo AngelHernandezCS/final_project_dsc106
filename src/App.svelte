@@ -11,17 +11,30 @@
   import Choropleth from "./Components/Choropleth.svelte";
   import Points from "./Components/Points.svelte";
 </script>
+<div class = 'center'>
+ <Meta />
 
-<Meta />
-<Title />
-<Intro />
+</div>
+
+<div class = 'center'>
+  <Title />
+</div>
+<div class = 'center'>
+  <Intro />
+
+</div>
+
 
 
 <div class="center">
   <Choropleth/>
 </div>
 
-<Points/>
+<div class="center">
+  <Points/>
+</div>
+
+
 <!--
 after choropleth(s) should be a way to show user
 the amount of sightings there are at a certain time (7am,7pm,12pm)
@@ -53,6 +66,7 @@ idk but goal is to let people know what shapes to look for in the sky
     justify-content: center;
     align-items: center;
     width: 100%;
+    background-color: #301934;
   }
 
 

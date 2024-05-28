@@ -26,8 +26,8 @@
         .data(geoData.features)
         .enter().append("path")
         .attr("d", path)
-        .attr("fill", "#ccc")
-        .attr("stroke", "#333");
+        .attr("fill", d3.interpolatePurples(0.7))
+        .attr("stroke", "#fff");
   
       // Add the points
       svg.append("g")
@@ -37,7 +37,7 @@
         .attr("cx", d => projection([+d.longitude, +d.latitude])[0])
         .attr("cy", d => projection([+d.longitude, +d.latitude])[1])
         .attr("r", 1)
-        .attr("fill", "red")
+        .attr("fill", "yellow")
         .attr("opacity", 0.6)
         .append("title")
         .text(d => `(${d.latitude}, ${d.longitude})`);
@@ -45,15 +45,16 @@
   </script>
   
   <div class="container">
-    <h1 id="title">Locations Map</h1>
+    <h1 id="title">Locations of Sightings</h1>
     <svg id="map"></svg>
   </div>
   
   <style>
     #title {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* Set title color to white for better contrast */
+  }
   
     #map {
       width: 100%;

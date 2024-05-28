@@ -762,18 +762,18 @@ var app = (function () {
     			a.textContent = "Angel H, Nida F, Marcus R";
     			t5 = text$3(", June 2024");
     			attr_dev(h10, "id", "intro-hed");
-    			attr_dev(h10, "class", "svelte-x47e3y");
+    			attr_dev(h10, "class", "svelte-1l31iyf");
     			add_location(h10, file$b, 1, 2, 23);
-    			attr_dev(h11, "class", "intro-sub svelte-x47e3y");
+    			attr_dev(h11, "class", "intro-sub svelte-1l31iyf");
     			add_location(h11, file$b, 2, 2, 81);
     			attr_dev(a, "href", "https://twitter.com/");
     			attr_dev(a, "target", "_blank");
     			add_location(a, file$b, 4, 4, 155);
     			attr_dev(h3, "id", "intro__date");
-    			attr_dev(h3, "class", "svelte-x47e3y");
+    			attr_dev(h3, "class", "svelte-1l31iyf");
     			add_location(h3, file$b, 3, 2, 129);
     			attr_dev(section, "id", "intro");
-    			attr_dev(section, "class", "svelte-x47e3y");
+    			attr_dev(section, "class", "svelte-1l31iyf");
     			add_location(section, file$b, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -863,10 +863,10 @@ var app = (function () {
     			p1 = element("p");
     			p1.textContent = "If scientists can't come to any conclusion about what these people have seen\n    then maybe it's best to check it out for youself. In this guide we'll explore\n    prime locations for sightings, the right times to look at, and what exactly\n    you should be looking for in the starry night sky. It might seem like alot\n    but dont worry we'll start off with the first step, Location.";
     			add_location(b, file$a, 10, 28, 507);
-    			attr_dev(p0, "class", "body-text");
+    			attr_dev(p0, "class", "body-text svelte-1tdzw38");
     			add_location(p0, file$a, 4, 2, 32);
     			add_location(br, file$a, 12, 2, 532);
-    			attr_dev(p1, "class", "body-text");
+    			attr_dev(p1, "class", "body-text svelte-1tdzw38");
     			add_location(p1, file$a, 13, 2, 539);
     			add_location(section, file$a, 3, 0, 20);
     		},
@@ -44851,13 +44851,13 @@ var app = (function () {
     			t1 = space();
     			svg = svg_element("svg");
     			attr_dev(h1, "id", "title");
-    			attr_dev(h1, "class", "svelte-137dpld");
-    			add_location(h1, file$2, 68, 2, 2175);
+    			attr_dev(h1, "class", "svelte-9grdif");
+    			add_location(h1, file$2, 69, 2, 2274);
     			attr_dev(svg, "id", "choropleth");
-    			attr_dev(svg, "class", "svelte-137dpld");
-    			add_location(svg, file$2, 70, 2, 2233);
+    			attr_dev(svg, "class", "svelte-9grdif");
+    			add_location(svg, file$2, 71, 2, 2332);
     			attr_dev(div, "class", "container");
-    			add_location(div, file$2, 67, 0, 2149);
+    			add_location(div, file$2, 68, 0, 2248);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -44905,7 +44905,7 @@ var app = (function () {
     		const dataMap = new Map(data.map(d => [d.state, +d.count]));
 
     		// Create a color scale
-    		const colorScale = sequential(Purples).domain(extent$1(data, d => +d.count));
+    		const colorScale = sequential().domain([min$2(data, d => +d.count), max$3(data, d => +d.count)]).interpolator(Purples).range([Purples(0.3), Purples(0.9)]); // Using d3.interpolatePurples
 
     		// Create a projection and path generator
     		const projection = albersUsa().fitSize([width, height], geoData);
@@ -44917,8 +44917,8 @@ var app = (function () {
     		svg.selectAll("path").data(geoData.features).enter().append("path").attr("d", path).attr("fill", d => {
     			const stateName = d.properties.NAME;
     			const value = dataMap.get(stateName);
-    			return value ? colorScale(value) : '#ccc';
-    		}).attr("stroke", "#333").on("mouseover", function (event, d) {
+    			return value ? colorScale(value) : Purples(0.3); // Ensure states with no data are set to a distinct color
+    		}).attr("stroke", "#fff").attr("stroke-width", 0.5).on("mouseover", function (event, d) {
     			const stateName = d.properties.NAME;
     			const value = dataMap.get(stateName);
     			tooltip.style("display", "block").html(`<strong>${stateName}</strong>: ${value || 0}`);
@@ -44926,10 +44926,6 @@ var app = (function () {
     			tooltip.style("left", event.pageX + 10 + "px").style("top", event.pageY - 20 + "px");
     		}).on("mouseout", function () {
     			tooltip.style("display", "none");
-    		}).text(d => {
-    			const stateName = d.properties.name;
-    			const value = dataMap.get(stateName);
-    			return `${stateName}: ${value}`;
     		});
     	});
 
@@ -45481,17 +45477,17 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			h1 = element("h1");
-    			h1.textContent = "Locations Map";
+    			h1.textContent = "Locations of Sightings";
     			t1 = space();
     			svg = svg_element("svg");
     			attr_dev(h1, "id", "title");
-    			attr_dev(h1, "class", "svelte-1yumxf");
-    			add_location(h1, file$1, 47, 4, 1337);
+    			attr_dev(h1, "class", "svelte-zl424y");
+    			add_location(h1, file$1, 47, 4, 1360);
     			attr_dev(svg, "id", "map");
-    			attr_dev(svg, "class", "svelte-1yumxf");
-    			add_location(svg, file$1, 48, 4, 1375);
+    			attr_dev(svg, "class", "svelte-zl424y");
+    			add_location(svg, file$1, 48, 4, 1407);
     			attr_dev(div, "class", "container");
-    			add_location(div, file$1, 46, 2, 1309);
+    			add_location(div, file$1, 46, 2, 1332);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45541,10 +45537,10 @@ var app = (function () {
     		const path = index$2().projection(projection);
 
     		// Draw the map
-    		svg.append("g").selectAll("path").data(geoData.features).enter().append("path").attr("d", path).attr("fill", "#ccc").attr("stroke", "#333");
+    		svg.append("g").selectAll("path").data(geoData.features).enter().append("path").attr("d", path).attr("fill", Purples(0.7)).attr("stroke", "#fff");
 
     		// Add the points
-    		svg.append("g").selectAll("circle").data(data).enter().append("circle").attr("cx", d => projection([+d.longitude, +d.latitude])[0]).attr("cy", d => projection([+d.longitude, +d.latitude])[1]).attr("r", 1).attr("fill", "red").attr("opacity", 0.6).append("title").text(d => `(${d.latitude}, ${d.longitude})`);
+    		svg.append("g").selectAll("circle").data(data).enter().append("circle").attr("cx", d => projection([+d.longitude, +d.latitude])[0]).attr("cy", d => projection([+d.longitude, +d.latitude])[1]).attr("r", 1).attr("fill", "yellow").attr("opacity", 0.6).append("title").text(d => `(${d.latitude}, ${d.longitude})`);
     	});
 
     	const writable_props = [];
@@ -45585,15 +45581,19 @@ var app = (function () {
     const file = "src/App.svelte";
 
     function create_fragment(ctx) {
+    	let div0;
     	let meta;
     	let t0;
+    	let div1;
     	let title;
     	let t1;
+    	let div2;
     	let intro;
     	let t2;
-    	let div;
+    	let div3;
     	let choropleth;
     	let t3;
+    	let div4;
     	let points;
     	let t4;
     	let scrollside;
@@ -45613,15 +45613,19 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div0 = element("div");
     			create_component(meta.$$.fragment);
     			t0 = space();
+    			div1 = element("div");
     			create_component(title.$$.fragment);
     			t1 = space();
+    			div2 = element("div");
     			create_component(intro.$$.fragment);
     			t2 = space();
-    			div = element("div");
+    			div3 = element("div");
     			create_component(choropleth.$$.fragment);
     			t3 = space();
+    			div4 = element("div");
     			create_component(points.$$.fragment);
     			t4 = space();
     			create_component(scrollside.$$.fragment);
@@ -45629,23 +45633,35 @@ var app = (function () {
     			create_component(conclusion.$$.fragment);
     			t6 = space();
     			create_component(resources.$$.fragment);
-    			attr_dev(div, "class", "center svelte-fiz0d9");
-    			add_location(div, file, 19, 0, 669);
+    			attr_dev(div0, "class", "center svelte-1dypxnz");
+    			add_location(div0, file, 13, 0, 637);
+    			attr_dev(div1, "class", "center svelte-1dypxnz");
+    			add_location(div1, file, 18, 0, 679);
+    			attr_dev(div2, "class", "center svelte-1dypxnz");
+    			add_location(div2, file, 21, 0, 721);
+    			attr_dev(div3, "class", "center svelte-1dypxnz");
+    			add_location(div3, file, 28, 0, 767);
+    			attr_dev(div4, "class", "center svelte-1dypxnz");
+    			add_location(div4, file, 32, 0, 812);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			mount_component(meta, target, anchor);
+    			insert_dev(target, div0, anchor);
+    			mount_component(meta, div0, null);
     			insert_dev(target, t0, anchor);
-    			mount_component(title, target, anchor);
+    			insert_dev(target, div1, anchor);
+    			mount_component(title, div1, null);
     			insert_dev(target, t1, anchor);
-    			mount_component(intro, target, anchor);
+    			insert_dev(target, div2, anchor);
+    			mount_component(intro, div2, null);
     			insert_dev(target, t2, anchor);
-    			insert_dev(target, div, anchor);
-    			mount_component(choropleth, div, null);
+    			insert_dev(target, div3, anchor);
+    			mount_component(choropleth, div3, null);
     			insert_dev(target, t3, anchor);
-    			mount_component(points, target, anchor);
+    			insert_dev(target, div4, anchor);
+    			mount_component(points, div4, null);
     			insert_dev(target, t4, anchor);
     			mount_component(scrollside, target, anchor);
     			insert_dev(target, t5, anchor);
@@ -45679,16 +45695,20 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(meta, detaching);
+    			if (detaching) detach_dev(div0);
+    			destroy_component(meta);
     			if (detaching) detach_dev(t0);
-    			destroy_component(title, detaching);
+    			if (detaching) detach_dev(div1);
+    			destroy_component(title);
     			if (detaching) detach_dev(t1);
-    			destroy_component(intro, detaching);
+    			if (detaching) detach_dev(div2);
+    			destroy_component(intro);
     			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div3);
     			destroy_component(choropleth);
     			if (detaching) detach_dev(t3);
-    			destroy_component(points, detaching);
+    			if (detaching) detach_dev(div4);
+    			destroy_component(points);
     			if (detaching) detach_dev(t4);
     			destroy_component(scrollside, detaching);
     			if (detaching) detach_dev(t5);
