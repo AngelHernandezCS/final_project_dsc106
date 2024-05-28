@@ -7,17 +7,17 @@
 
   // Paragraph text for scrolly
   $: steps = [
-    `<h1 class='step-title'>Step 1</h1>
+    `<h1 class='step-title'>Not a saucer?</h1>
        <br><br>
       <p>
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sint aut corrupti ullam neque quia labore laborum perspiciatis, molestias amet at, voluptatem ratione quaerat in sit minima reprehenderit molestiae, nobis sed. Earum facere exercitationem sit rerum, expedita magni nihil alias?
       </p>`,
-    `<h1 class='step-title'>Step 2</h1>
+    `<h1 class='step-title'>Unless They Are!</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sint aut corrupti ullam neque quia labore laborum perspiciatis, molestias amet at, voluptatem ratione quaerat in sit minima reprehenderit molestiae, nobis sed. Earum facere exercitationem sit rerum, expedita magni nihil alias?
         </p>
     <br><br>
-    
+
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sint aut corrupti ullam neque quia labore laborum perspiciatis, molestias amet at, voluptatem ratione quaerat in sit minima reprehenderit molestiae, nobis sed. Earum facere exercitationem sit rerum, expedita magni nihil alias?
   `,
   ];
@@ -113,10 +113,10 @@
   }
 </script>
 
-<h2 class="body-header">Side Scrolly Example</h2>
+<h2 class="body-header">What Should I Look For?</h2>
 <p class="body-text">
-  Here's an example of a typical side-scroller. It's responsive, and will fold
-  to an overlap scroll if the screen gets small enough:
+  From previous sightings we've composed the top 4 descriptions people have
+  given for a UFO.
 </p>
 <section>
   <!-- scroll container -->
