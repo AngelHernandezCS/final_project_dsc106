@@ -6,7 +6,8 @@
 
   let width = 500;
   let height = 400;
-
+  //i gave up i just displayed all the points at once, hid the ones that didnt show up at first,
+  //and fade them in when needed
 
   let svg;
   let airbasesGroup;
@@ -89,6 +90,7 @@
   });
 
   // Reactive statement to update airbase styles based on value
+  // pretty messy
   $: if (airbasesGroup) {
     
     if (value === 1) {
