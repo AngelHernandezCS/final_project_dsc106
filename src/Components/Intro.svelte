@@ -18,6 +18,11 @@
     you should be looking for in the starry night sky. It might seem like alot
     but dont worry we'll start off with the first step, Location.
   </p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 </section>
 
 <style>
