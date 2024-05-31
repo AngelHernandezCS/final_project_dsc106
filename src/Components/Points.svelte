@@ -92,6 +92,7 @@
     } else if (value == 2){
       airportGroup.selectAll("circle")
       .attr('opacity', 1)
+      document.getElementById('title').innerText = "Sightings, Bases, and Airports";
     }
   }
 </script>
