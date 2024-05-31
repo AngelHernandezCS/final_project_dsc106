@@ -16,7 +16,7 @@
     then maybe it's best to check it out for youself. In this guide we'll explore
     prime locations for sightings, the right times to look at, and what exactly
     you should be looking for in the starry night sky. It might seem like alot
-    but dont worry we'll start off with the first step, Location.
+    but dont worry we'll start off with the first step, playing around with a map.
   </p>
   <br>
   <br>

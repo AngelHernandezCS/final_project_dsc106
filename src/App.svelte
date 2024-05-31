@@ -7,6 +7,7 @@
   import Resources from "./Components/Resources.svelte";
   import ScrollSide from "./Components/ScrollSide.svelte";
   import Choropleth from "./Components/Choropleth.svelte";
+  import Chorotext from "./Components/Chorotext.svelte";
 
 </script>
 <div class = 'center'>
@@ -23,6 +24,10 @@
 </div>
 <div class="center">
   <Choropleth/>
+</div>
+
+<div class = 'center'>
+  <Chorotext/>
 </div>
 <div class = 'center'>
   <ScrollCenter/>
@@ -66,7 +71,7 @@ idk but goal is to let people know what shapes to look for in the sky
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #301934;
+    background-color: #071630;
   }
 
 

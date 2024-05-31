@@ -113,11 +113,10 @@ legend.append("g")
 </script>
 
 <div class="container">
-  <h1 id="chloro">Amount Of UFO Sightings by State</h1>
+  <h1 id="chloro">Number   of UFO Sightings by State</h1>
   
   <svg id="choropleth"></svg>
   <svg id = 'legend'></svg>
-<section><p id= 'body-text'>The map indicates California is the state with the most sightings.</p></section>
   
 </div>
 
