@@ -4,7 +4,7 @@
 <section>
   <p class="body-text">
      Aliens must love Hollywood... from the map we can see that
-     California has the most amount of sightings in, 8912 of them, 
+     California has the most amount of sightings, 8912 of them, 
      in the United States. A common trend shown is that states located
      near borders/oceans have many more sightings compared to central 
      states. Maybe the aliens care more for the US neighbors and the beach.
