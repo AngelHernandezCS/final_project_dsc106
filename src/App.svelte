@@ -21,15 +21,14 @@
 <div class = 'center'>
   <Intro />
 </div>
-
+<div class="center">
+  <Choropleth/>
+</div>
 <div class = 'center'>
   <ScrollCenter/>
 </div>
 
 
-<div class="center">
-  <Choropleth/>
-</div>
 
 
 

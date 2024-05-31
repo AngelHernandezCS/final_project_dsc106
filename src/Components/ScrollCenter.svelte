@@ -16,7 +16,11 @@
       `<h1 class='step-title'>Step 3</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, exercitationem. Quam impedit fuga quia earum architecto qui temporibus deleniti obcaecati assumenda, minima consequatur a fugit?
-      </p>`
+      </p>`,
+      `<h1 class='step-title'>Step 4</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, exercitationem. Quam impedit fuga quia earum architecto qui temporibus deleniti obcaecati assumenda, minima consequatur a fugit?
+      </p>`,
 
     ];
 

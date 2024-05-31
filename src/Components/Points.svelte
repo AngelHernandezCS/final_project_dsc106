@@ -7,12 +7,15 @@
   let width = 500;
   let height = 400;
 
+
   let svg;
   let airbasesGroup;
   let data;
   let airbasesData;
   let airportData;
-  let airportGroup
+  let airportGroup;
+  let circlePath;
+  let circleElement;
 
   onMount(async () => {
     svg = d3.select("#map")
@@ -72,6 +75,17 @@
       .attr("fill", "#66FF00")
       .style("transition", "opacity 1s ease") // CSS transition for opacity change
       .attr("opacity", 0); // Start with opacity 0
+
+    const circle = d3.geoCircle().center([-85, 37.5]).radius(5);
+    circlePath = path(circle());
+    circleElement = svg.append("path")
+      .attr("d", circlePath)
+      .attr("stroke", "blue")
+      .attr("stroke-width", 2)
+      .attr("fill", "none")
+      .style("transition", "opacity 1s ease") // CSS transition for opacity change
+      .attr("opacity", 0); // Start with opacity 0
+
   });
 
   // Reactive statement to update airbase styles based on value
@@ -83,16 +97,23 @@
       airportGroup.selectAll('circle')
         .attr('opacity', 0); 
       document.getElementById('title').innerText = "Sightings and Military Bases";
+      circleElement.attr('opacity',0) 
     } else if (value === 0){
       airbasesGroup.selectAll("circle")
         .attr("opacity", 0);
       airportGroup.selectAll('circle')
         .attr('opacity', 0)
       document.getElementById('title').innerText = "Locations of Sightings";
+      circleElement.attr('opacity',0)
     } else if (value == 2){
       airportGroup.selectAll("circle")
       .attr('opacity', 1)
       document.getElementById('title').innerText = "Sightings, Bases, and Airports";
+      circleElement.attr('opacity',0)
+    }
+    else if(value == 3){
+      circleElement.attr('opacity',1)
+      document.getElementById('title').innerText = "The Zone";
     }
   }
 </script>

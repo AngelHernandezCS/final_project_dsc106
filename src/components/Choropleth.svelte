@@ -63,17 +63,66 @@
         tooltip.style("display", "none");
       });
 
+      const legend = d3.select("#legend")
+      .attr("width", 100)
+      .attr("height", 200);
+
+    const legendScale = d3.scaleLinear()
+      .domain([d3.min(data, d => +d.count), d3.max(data, d => +d.count)])
+      .range([0, 200]);
+
+    const legendGradient = legend.append("defs")
+      .append("linearGradient")
+      .attr("id", "legendGradient")
+      .attr("x1", "0%")
+      .attr("x2", "0%")
+      .attr("y1", "0%")
+      .attr("y2", "100%");
+
+    legendGradient.append("stop")
+      .attr("offset", "0%")
+      .attr("stop-color", d3.interpolatePurples(0.3));
+
+    legendGradient.append("stop")
+      .attr("offset", "100%")
+      .attr("stop-color", d3.interpolatePurples(0.9));
+
+    legend.append("rect")
+      .attr("x", 10)
+      .attr("y", 10)
+      .attr("width", 20)
+      .attr("height", 200)
+      .attr("fill", "url(#legendGradient)");
+
+      const legendAxis = d3.axisRight(legendScale)
+  .tickSize(6)
+  .ticks(6)
+  .tickPadding(5); // Add some padding between ticks and text
+
+legend.append("g")
+  .attr("transform", "translate(30, 10)")
+  .call(legendAxis)
+  .style("fill", "white")
+  .selectAll("text") // Select all tick text elements
+  .style("fill", "white");
+
+      
+      
+
   });
 </script>
 
 <div class="container">
-  <h1 id="title">Amount Of UFO Sightings by State</h1>
+  <h1 id="chloro">Amount Of UFO Sightings by State</h1>
   
   <svg id="choropleth"></svg>
+  <svg id = 'legend'></svg>
+<section><p id= 'body-text'>The map indicates California is the state with the most sightings.</p></section>
+  
 </div>
 
 <style>
-  #title {
+  #chloro {
     text-align: center;
     margin-bottom: 20px;
     color: white; /* Set title color to white for better contrast */
@@ -97,4 +146,20 @@
     position: absolute;
     display: none;
   }
+  #legend {
+    position: absolute;
+    left: 18%;
+    top: 152%;
+    fill: white;
+  }
+
+  #body-text{
+    color: white;
+  }
+
+ 
+
+
+
+
 </style>
