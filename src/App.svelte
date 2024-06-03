@@ -11,6 +11,9 @@
   import Chart from "./Components/Chart.svelte";
 
   const dataset = [
+    { state: "All States", shape: "light", count: 13471 },
+    { state: "All States", shape: "triangle", count: 6548 },
+    { state: "All States", shape: "circle", count: 6117 },
     { state: "Alabama", shape: "light", count: 129 },
     { state: "Alabama", shape: "triangle", count: 78 },
     { state: "Alabama", shape: "circle", count: 61 },
@@ -192,6 +195,8 @@
   <!-- pass the hardcoded dataset as a prop to the chart component -->
   <Chart {dataset} />
 </div>
+
+
 
 
 

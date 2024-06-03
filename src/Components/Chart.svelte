@@ -24,10 +24,9 @@
                 labels: [],
                 datasets: [
                     {
-                        label: "# of Sightings",
                         data: [],
-                        backgroundColor: "rgba(54, 162, 235, 0.2)",
-                        borderColor: "rgba(54, 162, 235, 1)",
+                        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(0, 214, 76, 0.7)", "rgba(153, 102, 255, 0.2)"], // array of different colors
+                        borderColor: ["rgba(54, 162, 235, 1)", "rgba(0, 214, 76, 0.7)", "rgba(153, 102, 255, 1)"], // corresponding border colors
                         borderWidth: 1,
                     },
                 ],
@@ -40,11 +39,27 @@
                             font: {
                                 size: 17 // set the font size of the x-axis labels
                             }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Description Type',
+                            color: 'white', // Set the color of the y-axis title to white
+                            font: {
+                                size: 20 // Set the font size of the y-axis title
+                            }
                         }
                     },
                     y: {
                         ticks: {
                             color: 'white' // sets the color of the y-axis labels to white
+                        },
+                        title: {
+                            display: true,
+                            text: 'Number of Sightings',
+                            color: 'white', // Set the color of the y-axis title to white
+                            font: {
+                                size: 20 // Set the font size of the y-axis title
+                            }
                         },
                         beginAtZero: true,
                     },
@@ -53,7 +68,8 @@
                     legend: {
                         labels: {
                             color: 'white' // sets the color of the legend labels to white
-                        }
+                        },
+                        display: false // hide the legend item
                     }
                 }
             },
@@ -77,12 +93,13 @@
 <style>
 
     .card{
-        background-color: 071630;
+        background-color: #071630;
         width: 100%;
     }
 
     .menu{
-        background-color: 071630;
+        background-color: #071630;
         text-align: center;
+        transform: translate(0px,18px);
     }
 </style>
