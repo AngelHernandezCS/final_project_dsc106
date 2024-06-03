@@ -29,7 +29,7 @@
     { state: "Colorado", shape: "light", count: 293 },
     { state: "Colorado", shape: "triangle", count: 164 },
     { state: "Colorado", shape: "circle", count: 118 },
-			{ state: "Connecticut", shape: "light", count: 160 },
+		{ state: "Connecticut", shape: "light", count: 160 },
     { state: "Connecticut", shape: "circle", count: 93 },
     { state: "Connecticut", shape: "fireball", count: 90 },
     { state: "Delaware", shape: "triangle", count: 30 },
@@ -188,7 +188,6 @@
 
 
 <div class = 'bar'>
-
   <h1 class = 'bar' >UFO Sightings by Shape</h1>
   <!-- pass the hardcoded dataset as a prop to the chart component -->
   <Chart {dataset} />
@@ -238,5 +237,8 @@ idk but goal is to let people know what shapes to look for in the sky
 
 .bar{
   background-color: #071630;
+  color: white;
+  text-align: center;
+  margin: 0;
 }
 </style>

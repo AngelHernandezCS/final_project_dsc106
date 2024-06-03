@@ -34,10 +34,28 @@
             },
             options: {
                 scales: {
+                    x: {
+                        ticks: {
+                            color: 'white', // set the color of the x-axis labels to white
+                            font: {
+                                size: 17 // set the font size of the x-axis labels
+                            }
+                        }
+                    },
                     y: {
+                        ticks: {
+                            color: 'white' // sets the color of the y-axis labels to white
+                        },
                         beginAtZero: true,
                     },
                 },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white' // sets the color of the legend labels to white
+                        }
+                    }
+                }
             },
         });
     });
@@ -60,9 +78,11 @@
 
     .card{
         background-color: 071630;
+        width: 100%;
     }
 
     .menu{
         background-color: 071630;
+        text-align: center;
     }
 </style>
