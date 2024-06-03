@@ -116,7 +116,8 @@
       max-width: 500px;
       font-family: var(--font-main);
       line-height: 1.3;
-      border: 5px solid var(--default);
+      border: 10px solid var(--default);
+      border-color: purple;
     }
 
     .step.active .step-content {

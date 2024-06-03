@@ -2,11 +2,19 @@
   <h1 id="intro-hed">Beginners Guide To UFO Spotting</h1>
   <h1 class="intro-sub">They're out there!</h1>
   <h3 id="intro__date">
-    <a href="https://twitter.com/" target="_blank">Angel H, Nida F, Marcus R</a>, June 2024
+    <a id= 'name' href="https://github.com/AngelHernandezCS" target="_blank">Angel H,</a>
+    <a id= 'name' href="https://github.com/marcuhhh" target="_blank">Marcus R,</a>
+    <a id= 'name' href="https://github.com/nidafirdaws" target="_blank">Nida F,</a>
+
+    
+    , June 2024
   </h3>
 </section>
 
 <style>
+  #name{
+    color: white;
+  }
   #intro {
     max-width: 600px;
     margin: 1rem auto;

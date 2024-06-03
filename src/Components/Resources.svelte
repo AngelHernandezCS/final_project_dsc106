@@ -14,12 +14,20 @@
       <span>(Michael Keller)</span>
     </p>
     <p class="resource-item">
-      <a class="on-end" href="https://katex.org/">KaTeX</a>
-      <span>(Emily Eisenberg & Sophie Alpert)</span>
-    </p>
-    <p class="resource-item">
       <a class="on-end" href="https://svelte.dev/">Svelte</a>
       <span>(Rich Harris)</span>
+    </p>
+    <p class="resource-item">
+      <a class="on-end" href="https://dpcld.defense.gov/Privacy/SORNsIndex/DOD-Component-Notices/Address-Directory/Airforce-Address-Directory/">Airforce Bases</a>
+      <span>(US Department of Defense)</span>
+    </p>
+    <p class="resource-item">
+      <a class="on-end" href="https://data.humdata.org/dataset/ourairports-usa?">Major US Airports </a>
+      <span>(Humanitarian Data Exchange)</span>
+    </p>
+    <p class="resource-item">
+      <a class="on-end" href="https://www.kaggle.com/datasets/NUFORC/ufo-sightings/data">UFO Sightings</a>
+      <span>(NUFOC, Anna Wolak)</span>
     </p>
   </div>
 </section>

@@ -113,10 +113,10 @@
   }
 </script>
 
-<h2 class="body-header">What Should I Look For?</h2>
+<h2 class="body-header">A Few Stories</h2>
 <p class="body-text">
-  From previous sightings we've composed the top 4 descriptions people have
-  given for a UFO.
+  Before we move on for our best recommendations to catch some authentic UFOS, lets first take a look at some of the stories people have about
+  the documented encounters and peoples expereinces. We've noted the most interesting below.
 </p>
 <section>
   <!-- scroll container -->

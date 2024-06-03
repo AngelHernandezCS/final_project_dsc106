@@ -132,6 +132,8 @@
     text-align: center;
     margin-bottom: 20px;
     color: white;
+    border: 5px solid var(--default);
+    border-color: black;
   }
 
   #map-container {

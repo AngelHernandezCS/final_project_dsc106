@@ -5,11 +5,10 @@
   import ScrollCenter from "./Components/ScrollCenter.svelte";
   import Conclusion from "./Components/Conclusion.svelte";
   import Resources from "./Components/Resources.svelte";
-  import ScrollSide from "./Components/ScrollSide.svelte";
   import Choropleth from "./Components/Choropleth.svelte";
   import Chorotext from "./Components/Chorotext.svelte";
   import Chart from "./Components/Chart.svelte";
-
+  import Charttext from "./Components/Charttext.svelte";
   const dataset = [
     { state: "All States", shape: "light", count: 13471 },
     { state: "All States", shape: "triangle", count: 6548 },
@@ -196,6 +195,10 @@
   <Chart {dataset} />
 </div>
 
+<div class = 'center'>
+<Charttext/>
+
+</div>
 
 
 
@@ -206,28 +209,13 @@
 
 
 
-<!--
-after choropleth(s) should be a way to show user
-the amount of sightings there are at a certain time (7am,7pm,12pm)
-by itself using aggregate of all states, and an option to choose a specific state
-for the given time (all states, CA, NV,..)
-
-idea:
-a center number and two drop down menus above it for each option
-center number changes based on each drop down menu choice
 
 
--->
 
-<ScrollSide />
-<!--
-use the scroll side template to show the most common shapes people have seen:
-u can do ranking of each type or use the comments section in the dataset and find 
-funny quotes people have said
-idk but goal is to let people know what shapes to look for in the sky
+<div class = 'center'>
+  <Conclusion />
+</div>
 
--->
-<Conclusion />
 <Resources />
 
 <style>
@@ -245,5 +233,6 @@ idk but goal is to let people know what shapes to look for in the sky
   color: white;
   text-align: center;
   margin: 0;
+  padding: 0em 2em;
 }
 </style>
