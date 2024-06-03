@@ -1,16 +1,7 @@
 <script>
-  import Meta from "./Meta.svelte";
-  import Title from "./Components/Title.svelte";
-  import Intro from "./Components/Intro.svelte";
-  import ScrollCenter from "./Components/ScrollCenter.svelte";
-  import Conclusion from "./Components/Conclusion.svelte";
-  import Resources from "./Components/Resources.svelte";
-  import ScrollSide from "./Components/ScrollSide.svelte";
-  import Choropleth from "./Components/Choropleth.svelte";
-  import Chorotext from "./Components/Chorotext.svelte";
-  import Chart from "./Components/Chart.svelte";
+    import Chart from "./Chart.svelte";
 
-  const dataset = [
+    const dataset = [
     { state: "Alabama", shape: "light", count: 129 },
     { state: "Alabama", shape: "triangle", count: 78 },
     { state: "Alabama", shape: "circle", count: 61 },
@@ -162,81 +153,18 @@
     { state: "Wyoming", shape: "other", count: 17 },
     { state: "Wyoming", shape: "circle", count: 15 }
 ];
+
 </script>
-<div class = 'center'>
- <Meta />
 
-</div>
-
-<div class = 'center'>
-  <Title />
-</div>
-
-<div class = 'center'>
-  <Intro />
-</div>
-<div class="center">
-  <Choropleth/>
-</div>
-
-<div class = 'center'>
-  <Chorotext/>
-</div>
-<div class = 'center'>
-  <ScrollCenter/>
-</div>
-
-
-<div class = 'bar'>
-
-  <h1 class = 'bar' >UFO Sightings by Shape</h1>
-  <!-- pass the hardcoded dataset as a prop to the chart component -->
-  <Chart {dataset} />
-</div>
-
-
-
-
-
-
-
-
-
-<!--
-after choropleth(s) should be a way to show user
-the amount of sightings there are at a certain time (7am,7pm,12pm)
-by itself using aggregate of all states, and an option to choose a specific state
-for the given time (all states, CA, NV,..)
-
-idea:
-a center number and two drop down menus above it for each option
-center number changes based on each drop down menu choice
-
-
--->
-
-<ScrollSide />
-<!--
-use the scroll side template to show the most common shapes people have seen:
-u can do ranking of each type or use the comments section in the dataset and find 
-funny quotes people have said
-idk but goal is to let people know what shapes to look for in the sky
-
--->
-<Conclusion />
-<Resources />
+<main>
+    <h1>UFO Sightings by Shape</h1>
+    <!-- pass the hardcoded dataset as a prop to the chart component -->
+    <Chart {dataset} />
+</main>
 
 <style>
-
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #071630;
-  }
-
-.bar{
-  background-color: #071630;
-}
+    main {
+        text-align: center;
+        padding: 20px;
+    }
 </style>
