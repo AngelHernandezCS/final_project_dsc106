@@ -190,7 +190,7 @@
 
 
 <div class = 'bar'>
-  <h1 class = 'bar' >UFO Sightings by Shape</h1>
+  <h1 class = 'bar' >UFO Sightings by Shape by State</h1>
   <!-- pass the hardcoded dataset as a prop to the chart component -->
   <Chart {dataset} />
 </div>
