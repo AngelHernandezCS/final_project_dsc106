@@ -9,6 +9,7 @@
   import Chorotext from "./Components/Chorotext.svelte";
   import Chart from "./Components/Chart.svelte";
   import Charttext from "./Components/Charttext.svelte";
+  import ChloroplethDynamic from "./Components/ChloroplethDynamic.svelte";
   const dataset = [
     { state: "All States", shape: "light", count: 13471 },
     { state: "All States", shape: "triangle", count: 6548 },
@@ -174,6 +175,7 @@
   <Title />
 </div>
 
+
 <div class = 'center'>
   <Intro />
 </div>
@@ -188,6 +190,9 @@
   <ScrollCenter/>
 </div>
 
+<div class="center">
+  <ChloroplethDynamic/>
+</div>
 
 <div class = 'bar'>
   <h1 class = 'bar' >UFO Sightings by Shape by State</h1>
@@ -199,17 +204,6 @@
 <Charttext/>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class = 'center'>
