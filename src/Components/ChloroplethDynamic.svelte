@@ -89,7 +89,7 @@
       .attr("height", 200)
       .style("position", "absolute")
       .style("left", "100px") // Adjust left position as needed
-      .style("top", "9200px"); // Adjust top position as needed
+      .style("top", "6500px"); // Adjust top position as needed
 
     const legendScale = d3.scaleLinear()
       .domain([d3.min(Array.from(dataMap.values())), d3.max(Array.from(dataMap.values()))])
@@ -187,7 +187,7 @@
   #dynamic-legend {
     position: absolute;
     left: 20px; /* Adjust left position as needed */
-    top: 120px; /* Adjust top position as needed */
+    top: 3000px; /* Adjust top position as needed */
     fill: white;
   }
 </style>
